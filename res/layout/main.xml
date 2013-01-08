@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center"
+	android:background="@drawable/waveform">
+
+	<Button android:text="@string/record" android:id="@+id/record"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:height="80dip" android:width="150dip" android:textSize="30dip"
+		android:textColor="#ff0000" android:layout_margin="20dip" />
+	<Button android:text="@string/play" android:id="@+id/play"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:width="150dip" android:textSize="30dip" android:height="80dip"
+		android:textColor="#00cc00"
+		android:layout_margin="20dip" />
+	<!-- <Button android:text="@string/play" android:id="@+id/play" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"></Button> <Button android:text="@string/delete" 
+		android:id="@+id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button> -->
+</LinearLayout>

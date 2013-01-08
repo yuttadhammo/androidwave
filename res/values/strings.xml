@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status">Press Record to start recording.</string>
+    <string name="app_name">Sound Recorder</string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="play">Play</string>
+    <string name="delete">Delete</string>
+    <string name="recording_notification">Recording</string>
+    
+</resources>
