@@ -111,7 +111,7 @@ public class RecorderService extends Service
 	{
 //		Log.d("RecorderService", "onCreate()");
 		mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        prefs = getApplicationContext().getSharedPreferences("preferences", Activity.MODE_PRIVATE);
+        prefs =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 	}
 
 	@Override
@@ -365,6 +365,7 @@ public class RecorderService extends Service
 					AudioFormat.CHANNEL_IN_MONO, 
 					AudioFormat.ENCODING_PCM_16BIT);
 			Log.d("Recorder", "Min buffer size: " + min);
+			Log.d("Recorder", "Sampling Rate: " + samplingRate);
 			if (min < 4096)
 				min = 4096;
 			
