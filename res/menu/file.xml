@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+       	<item 
+		android:icon="@android:drawable/ic_menu_delete"
+		android:title="@string/delete_all"
+  		android:showAsAction="ifRoom|withText" 
+        android:orderInCategory="1"
+		android:id="@+id/menuDeleteAll"/>
+	<item 
+		android:icon="@android:drawable/ic_menu_preferences"
+		android:title="@string/menuPrefs"
+  		android:showAsAction="ifRoom" 
+        android:orderInCategory="2"
+		android:id="@+id/menuPrefs"/>
+</menu>

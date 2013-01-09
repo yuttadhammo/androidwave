@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="status">Press Record to start recording.</string>
-    <string name="app_name">Sound Recorder</string>
+    <string name="app_name">Android Wave</string>
     <string name="record">Record</string>
     <string name="stop">Stop</string>
     <string name="play">Play</string>
     <string name="delete">Delete</string>
     <string name="recording_notification">Recording</string>
     
+	<string name="filePickerTitle">Sound Recordings</string>
+	<string name="noFiles">no sound files in directory</string>
+	<string name="chooseFile">Choose a wav file to play:</string>
+	
+	<string name="menuPrefs">Preferences</string>
+	<string name="menuFile">Files</string>
+
+	<string name="prefMisc">Misc</string>
+	<string name="prefDataDir">Data Directory</string>
+	<string name="prefSample">Sample Rate (kHz)</string>
+		
+	<string name="file_options">File Options</string>
+
+	<string name="delete_all">Delete All Files</string>
+	<string name="really_delete_all">Really delete all wav files in the designated directory?</string>
+	<string name="mkdir">Create Directory</string>
+	<string name="want_mkdir">The directory was not found... would you like to create it?</string>
+							
+						
 </resources>

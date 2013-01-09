@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="org.yuttadhammo.androidwave"
-      android:versionCode="1"
-      android:versionName="1.0" android:installLocation="auto">
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+      android:versionCode="4"
+      android:versionName="4" android:installLocation="auto">
+	<supports-screens android:resizeable="true"
+	            android:smallScreens="true"
+	            android:normalScreens="true"
+	            android:largeScreens="true"
+	            android:xlargeScreens="true"
+	            android:anyDensity="true"/>
+     <uses-sdk android:targetSdkVersion="16" android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+  	<application 
+        android:icon="@drawable/icon" 
+        android:label="@string/app_name"
+        android:allowBackup="true">
         <activity android:name=".RecorderController"
-                  android:label="@string/app_name">
+ 			android:theme="@style/LightTheme"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="file"/>
+				<data android:host="*"/>
+				<data android:mimeType="audio/*"/>
+				<data android:pathPattern=".*\\.wav" />
+            </intent-filter>
         </activity>
 	    <service android:name=".RecorderService">
 	    </service>
-
+        <activity android:name=".FilePickerActivity"
+			android:theme="@style/LightTheme"
+        	android:label="@string/filePickerTitle"/>
+		<activity android:name=".SettingsActivity" 
+        	android:theme="@style/LightTheme"
+ 			android:label="@string/menuPrefs"
+ 			android:configChanges="orientation|screenSize"
+ 			/>
     </application>
-    <uses-sdk android:minSdkVersion="7" />
-	<!--  
+    	<!--  
 	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>-->
-	<uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
-	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
 </manifest>

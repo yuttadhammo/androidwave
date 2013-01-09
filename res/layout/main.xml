@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" android:gravity="center"
-	android:background="@drawable/waveform">
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+    >
+    <org.yuttadhammo.androidwave.WaveformView android:id="@+id/waveform"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" />
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:gravity="center"
+		>
+		<View 
+		    android:layout_weight="1"
+			android:layout_width="match_parent" 
+			android:layout_height="0dp"
+		    />
+		<Button android:text="@string/record" android:id="@+id/record"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:height="80dip" android:width="150dip" android:textSize="30sp"
+			android:textColor="#ffffff" android:layout_margin="20dip" 
+			android:background="#cc0000"/>
+		<View 
+		    android:layout_weight="1"
+			android:layout_width="match_parent" 
+			android:layout_height="0dp"
+		    />
+		<Button 
+		    android:text="@string/play" 
+		    android:id="@+id/play"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:width="150dip" 
+			android:textSize="30sp" 
+			android:height="80dip"
+			android:textColor="#ffffff"
+			android:layout_margin="20dip" 
+			android:background="#00cc00"
+			/>
+		<View 
+		    android:layout_weight="1"
+			android:layout_width="match_parent" 
+			android:layout_height="0dp"
+		    />
+	</LinearLayout>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="20sp"
+		android:text=""
+		android:textColor="@drawable/file_path"
+		android:background="#FFFFFF"
+		android:gravity="center_horizontal"
+		android:id="@+id/text"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+	    />
+</RelativeLayout>
 
-	<Button android:text="@string/record" android:id="@+id/record"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:height="80dip" android:width="150dip" android:textSize="30dip"
-		android:textColor="#ff0000" android:layout_margin="20dip" />
-	<Button android:text="@string/play" android:id="@+id/play"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:width="150dip" android:textSize="30dip" android:height="80dip"
-		android:textColor="#00cc00"
-		android:layout_margin="20dip" />
-	<!-- <Button android:text="@string/play" android:id="@+id/play" android:layout_width="wrap_content" 
-		android:layout_height="wrap_content"></Button> <Button android:text="@string/delete" 
-		android:id="@+id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button> -->
-</LinearLayout>
