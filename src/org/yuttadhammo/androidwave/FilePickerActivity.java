@@ -185,7 +185,7 @@ public class FilePickerActivity extends ListActivity {
 				break;
 
 			case (int)R.id.menuPrefs:
-				intent = new Intent(this, SettingsActivity.class);
+				intent = new Intent(this, WaveSettingsActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 				break;

@@ -30,7 +30,6 @@ public class RecorderService extends Service
 	private Recorder recorder = null;
 	private Handler handler;
 	private String filename = null;
-	private Context context;
 	
 	public void setHandler(Handler handler) {
 		this.handler = handler;
@@ -189,7 +188,7 @@ public class RecorderService extends Service
 		// The PendingIntent to launch our activity if the user selects this
 		// notification
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-				new Intent(this, RecorderController.class), 0);
+				new Intent(this, AndroidWave.class), 0);
 
 		// Set the info for the views that show in the notification panel.
 		notification.setLatestEventInfo(this,

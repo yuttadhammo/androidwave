@@ -2,11 +2,9 @@
 <RelativeLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="fill_parent"
-		android:layout_height="fill_parent" 
+		android:layout_height="fill_parent"
+		android:background="@drawable/waveform" 
     >
-    <org.yuttadhammo.androidwave.WaveformView android:id="@+id/waveform"
-       android:layout_width="fill_parent"
-       android:layout_height="fill_parent" />
 	<LinearLayout 
 		android:orientation="vertical" 
 		android:layout_width="fill_parent"
@@ -58,5 +56,23 @@
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true"
 	    />
+	<RelativeLayout 
+	    android:layout_width="10dp"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentRight="true"
+	    android:id="@+id/meter"
+	    >
+	    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/meter"/>
+	    <View
+	        android:id="@+id/meter_cover"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentTop="true"
+		    android:background="#FF000000"/>
+	    	    
+	</RelativeLayout>
 </RelativeLayout>
 

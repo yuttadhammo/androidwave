@@ -11,5 +11,9 @@
 			android:title="@string/prefDataDir"
 			android:shouldDisableView="true"
 			android:singleLine="true"/>
+   		<CheckBoxPreference 
+   		    android:key="meter_show"
+   		    android:title="@string/prefMeterShow"
+   		    android:defaultValue="false"/>
     </PreferenceCategory>    
 </PreferenceScreen>

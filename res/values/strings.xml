@@ -18,7 +18,8 @@
 	<string name="prefMisc">Misc</string>
 	<string name="prefDataDir">Data Directory</string>
 	<string name="prefSample">Sample Rate (kHz)</string>
-		
+	<string name="prefMeterShow">Show Microphone Meter</string>
+			
 	<string name="file_options">File Options</string>
 
 	<string name="delete_all">Delete All Files</string>
