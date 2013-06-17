@@ -33,7 +33,7 @@ public class SoundMeter {
     	}
         if (mRecorder == null) {
             mRecorder = new MediaRecorder();
-            mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+            mRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
             mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
             mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
             mRecorder.setOutputFile("/dev/null"); 
@@ -49,6 +49,7 @@ public class SoundMeter {
             mRecorder.start();
             mEMA = 0.0;
         }
+        else return;
         hUpdate = new Handler();
         rUpdate = new Runnable() {
 
@@ -80,7 +81,7 @@ public class SoundMeter {
 
     public void stop() {
         if (mRecorder != null) {
-            mRecorder.stop();       
+            mRecorder.stop();
             mRecorder.release();
             mRecorder = null;
         }

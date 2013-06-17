@@ -295,7 +295,7 @@ public class RecorderService extends Service
 			
 			int min = AudioRecord.getMinBufferSize(44100, 
 					AudioFormat.CHANNEL_IN_MONO, 
-					AudioFormat.ENCODING_PCM_16BIT);
+					AudioFormat.ENCODING_DEFAULT);
 			if (min < 4096)
 				min = 4096;
 
@@ -307,9 +307,7 @@ public class RecorderService extends Service
 			}
 			
 //			Log.d("Recorder", "starting recording");
-
 			record.startRecording();
-
 
 			AudioWriter out = new WavWriter();
 
@@ -361,18 +359,18 @@ public class RecorderService extends Service
 		{
 			int samplingRate = Integer.parseInt(prefs.getString("sample_rate", "44100"));
 			int min = AudioRecord.getMinBufferSize(samplingRate, 
-					AudioFormat.CHANNEL_IN_MONO, 
-					AudioFormat.ENCODING_PCM_16BIT);
+					AudioFormat.CHANNEL_IN_DEFAULT, 
+					AudioFormat.ENCODING_DEFAULT);
 			Log.d("Recorder", "Min buffer size: " + min);
 			Log.d("Recorder", "Sampling Rate: " + samplingRate);
 			if (min < 4096)
 				min = 4096;
 			
-			AudioRecord record = new AudioRecord(MediaRecorder.AudioSource.MIC, samplingRate,
-					AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT,	min);
+			AudioRecord record = new AudioRecord(MediaRecorder.AudioSource.DEFAULT, samplingRate,
+					AudioFormat.CHANNEL_IN_DEFAULT, AudioFormat.ENCODING_DEFAULT,	min);
 			if (record.getState() == AudioRecord.STATE_INITIALIZED)
 			{
-//				Log.d("Recorder", "Audio recorder initialised at " + record.getSampleRate());
+				Log.d("Recorder", "Audio recorder initialised at " + record.getSampleRate());
 				return record;
 			}
 			record.release();

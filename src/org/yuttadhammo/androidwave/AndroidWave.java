@@ -93,10 +93,16 @@ public class AndroidWave extends Activity
 	public void onResume(){
 		super.onResume();
 		dir = new File(prefs.getString("data_dir", Environment.getExternalStorageDirectory().getPath()+"/Sound Recordings/"));
-		if(mp == null && (mService == null || !mService.isRecording()))
+		if(mp == null && (mService == null || !mService.isRecording())) {
 			sm.start();
-		else
-			sm.stop();
+		}
+	}
+	
+	@Override
+	public void onPause(){
+		super.onPause();
+		sm.stop();
+
 	}
 	
 
